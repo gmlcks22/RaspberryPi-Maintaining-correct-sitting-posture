@@ -1,0 +1,9 @@
+input[type=text]:hover {
+  background: aliceblue;
+  border: 2px solid skyblue;
+}
+
+input[type=submit]:hover {
+  background: rgb(104, 206, 104);
+  color: white;
+}

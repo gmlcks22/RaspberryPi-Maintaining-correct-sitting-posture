@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>전화번호 관리</title>
+  <link href="./../static/mystyle.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+  <h2>전화번호 관리</h2>
+  <hr>
+
+  <h3>추가</h3>
+  <p>이름과 전화번호를 입력하고 저장 버튼을 누르세요.</p>
+  <hr>
+  <form action="/store" method="get">
+    이름 <input name="name" type="text">&nbsp;
+    전화번호 <input name="tel" type="text">
+    <input value="저장" type="submit">
+  </form>
+  <hr>
+  {% print(msg) %}
+  <hr>
+
+  <h3>검색</h3>
+  <p>이름을 입력하고 검색 버튼을 누르세요.</p>
+  <hr>
+  <form action="/search" method="post">
+    이름 <input name="name" type="text">&nbsp;
+    <input value="검색" type="submit">
+  </form>
+  <hr>
+  {% print(alert) %}
+  {% print(nameData) %}{% print(middle) %}{% print(telData) %}
+  <hr>
+
+  <h3>제거</h3>
+  <p>저장된 전화번호를 모두 삭제하려면 제거 버튼을 누르세요.</p>
+  <hr>
+  <form action="/delete">
+    <input value="제거" type="submit">
+  </form>
+  <hr>
+
+  <h3>출력</h3>
+  <p>보기 버튼을 누르면 전화번호 전체가 출력됩니다.</p>
+  <hr>
+  <form action="/print">
+    <input value="출력" type="submit">
+  </form>
+  <hr>
+</body>
+
+</html>
